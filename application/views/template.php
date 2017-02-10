@@ -17,11 +17,11 @@
                     <span class="myhead">UGLIBOI-Z</span>
                     <span class="mynav">
                         <ul>
-                            <li><a href="/">Home</li>
-                            <li><a href="/">Parts</li>
-                            <li><a href="/">Assembly</li>
-                            <li><a href="/history">History</li>
-                            <li><a href="/">About</li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/parts">Parts</a></li>
+                            <li><a href="/assembly">Assembly</a></li>
+                            <li><a href="/history">History</a></li>
+                            <li><a href="/about">About</a></li>
                         </ul>
                     </span>
                 </div>
