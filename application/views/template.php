@@ -17,11 +17,11 @@
                     <span class="myhead">UGLIBOI-Z</span>
                     <span class="mynav">
                         <ul>
-                            <li><a href="/">Home</li>
-                            <li><a href="/">Parts</li>
-                            <li><a href="/assembly">Assembly</li>
-                            <li><a href="/">History</li>
-                            <li><a href="/">About</li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/parts">Parts</a></li>
+                            <li><a href="/assembly">Assembly</a></li>
+                            <li><a href="/history">History</a></li>
+                            <li><a href="/about">About</a></li>
                         </ul>
                     </span>
                 </div>
@@ -32,6 +32,8 @@
                 <div id="footer" class="span12">UgliBoi-z</div>
             </div>
 	</body>
+
+        <script type="text/javascript" src="/js/lightbox.min.js"></script>
         <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script> 
         <script type="text/javascript" src="/js/lightbox.min.js"></script>  
 </html>
