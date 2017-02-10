@@ -19,7 +19,7 @@
                         <ul>
                             <li><a href="/">Home</li>
                             <li><a href="/">Parts</li>
-                            <li><a href="/">Assembly</li>
+                            <li><a href="/assembly">Assembly</li>
                             <li><a href="/">History</li>
                             <li><a href="/">About</li>
                         </ul>
