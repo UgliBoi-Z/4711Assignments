@@ -32,6 +32,8 @@
                 <div id="footer" class="span12">UgliBoi-z</div>
             </div>
 	</body>
-        <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+
         <script type="text/javascript" src="/js/lightbox.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script> 
+        <script type="text/javascript" src="/js/lightbox.min.js"></script>  
 </html>
