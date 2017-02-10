@@ -10,6 +10,7 @@
             <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
             <link rel="stylesheet" type="text/css" media="all" href="/assets/css/lightbox.css"/>
             <link rel="stylesheet" type="text/css" media="all" href="/assets/css/screen.css"/>
+            <link rel="stylesheet" type="text/css" media="all" href="/assets/css/homepage.css"/>
 	</head>
 	<body>
             <div id="wrapper">
