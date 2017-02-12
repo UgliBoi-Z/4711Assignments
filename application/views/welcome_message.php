@@ -1,20 +1,20 @@
-<h1>Welcome to UgliBoi-Z Factory Website</h1>
-
-<div id="body">
-	
-	<table border = "0" cellpadding = "10" cellspacing = "100">
+<h1>UgliBoi-Z Factory</h1>
+<div id="homepageDash" >
+	{records}
+	<table id = "dashboard">
 		<tr>
 			<th>Parts on hand</th>
 			<th>Assembled Robots</th>
 			<th>Funds spent</th>
 			<th>Funds earned</th>
 		</tr>
-		</tr>
-			<th>{parts}</th>
+		<tr>
+			<th>{part}</th>
 			<th>{assembled}</th>
 			<th>{fundSpent}</th>
 			<th>{fundEarned}</th>
 		</tr>
 	</table>
+	{/records}
 	
 </div>
