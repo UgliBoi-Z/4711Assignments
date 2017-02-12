@@ -16,15 +16,7 @@
             <div id="wrapper">
                 <div id="header">
                     <span class="myhead">UGLIBOI-Z</span>
-                    <span class="mynav">
-                        <ul>
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/parts">Parts</a></li>
-                            <li><a href="/assembly">Assembly</a></li>
-                            <li><a href="/history">History</a></li>
-                            <li><a href="/about">About</a></li>
-                        </ul>
-                    </span>
+                    <span class="mynav">{menubar}</span>
                 </div>
                 <div class="alone"></div>
 			<div id="content">
@@ -34,7 +26,6 @@
             </div>
 	</body>
 
-        <script type="text/javascript" src="/js/lightbox.min.js"></script>
         <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script> 
         <script type="text/javascript" src="/js/lightbox.min.js"></script>  
 </html>

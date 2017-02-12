@@ -79,6 +79,14 @@ class Inventory extends CI_Model{
             return $this->data;
     }
     
+    // retrive all available parts by part
+    public function allParts()
+    { 
+        $x = $this->data;    
+        usort($x, function($a, $b) {
+            return $a['part'] - $b['part'];
+        });    
+        return($x);
+    }
+ 
 }
-
-
