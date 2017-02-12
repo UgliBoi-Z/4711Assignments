@@ -1,3 +1,3 @@
-<h1>UgliBoi-Z Assembly</h1>
+<h1>UgliBoi-Z Parts</h1>
 {thetable}
 <p> Available Parts </p>
