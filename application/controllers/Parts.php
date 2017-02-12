@@ -48,5 +48,21 @@ class Parts extends Application
             $this->data['pagebody'] = 'parts';
             $this->render();
         }
+        
+        public function item($id) {
+            // view we want shown
+            $this->data['pagebody'] = 'justone';
+            $source = $this->inventory->get($id);
+
+            // pull data from quotes data
+            $this->data['date'] = $source['date'];
+            $this->data['what'] = $source['what'];
+            $this->data['mug'] = $source['mug'];
+            $this->data['CA'] = $source['CA'];
+
+            $this->render();
+        }
+        
+        
          
 }
