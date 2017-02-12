@@ -1,5 +1,6 @@
+<h1>Transaction History</h1>
 <div id="historyTable">
-    <h1>Transaction History</h1>
+    <!-- {history} -->
     <table>
         <tr>
             <th>Trans. #</th>
