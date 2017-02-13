@@ -27,28 +27,28 @@ class Parts extends Application
                 'cell_start' => '<td class="oneimage">',
                 'cell_alt_start' => '<td calss="oneimage">'
             );
-            
+
             $this->table->set_template($parms);
-            
+
             $list = array();
             foreach ($parts as $part)
             {
                 $list[] = array (
                     'piece' => $part['piece'],
-                    'mug' => $part['mug'],			
+                    'mug' => $part['mug'],
                     'what' => $part['what']);
-            } 
-            
-            foreach($list as $x){	
+            }
+
+            foreach($list as $x){
                 $cells[] = $this->parser->parse('_cell', (array) $x, true);
             }
-            
+
             $rows = $this->table->make_columns($cells, 3);
             $this->data['thetable'] = $this->table->generate($rows);
             $this->data['pagebody'] = 'parts';
             $this->render();
         }
-        
+
         public function item($id) {
             // view we want shown
             $this->data['pagebody'] = 'justone';
@@ -62,7 +62,5 @@ class Parts extends Application
 
             $this->render();
         }
-        
-        
-         
+
 }
