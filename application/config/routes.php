@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['/history'] = 'history';
 $route['/assembly'] = 'assembly';
 $route['/parts'] = 'parts';
+$route['parts/(:any)(:num)'] = 'parts/item/$1$2';
