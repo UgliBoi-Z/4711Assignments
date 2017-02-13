@@ -18,14 +18,13 @@
                     <span class="myhead">UGLIBOI-Z</span>
                     <span class="mynav">{menubar}</span>
                 </div>
-                <div class="alone"></div>
-			<div id="content">
-                            {content}
-			</div>
+				<div id="content">
+	                            {content}
+				</div>
                 <div id="footer" class="span12">UgliBoi-z</div>
             </div>
 	</body>
 
-        <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script> 
-        <script type="text/javascript" src="/js/lightbox.min.js"></script>  
+        <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/js/lightbox.min.js"></script>
 </html>

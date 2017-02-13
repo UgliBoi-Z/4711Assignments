@@ -35,12 +35,12 @@ class Assembly extends Application
 			'part' => $part['part'],
 			'piece' => $part['piece'],
 			'CA' => $part['CA'],
-			'mug' => $part['mug'],			
+			'mug' => $part['mug'],
 			'plant' => $part['plant'],
 			'date' => $part['date']);
-		} 
+		}
 		$this->data['partlist'] = $list;
-		$this->render(); 
+		$this->render();
 	}
 
 }
