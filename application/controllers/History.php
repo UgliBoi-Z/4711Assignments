@@ -5,6 +5,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class History extends Application
 {
 
+
+	function __construct()
+	{
+		parent::__construct();
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +26,18 @@ class History extends Application
 	public function index()
 	{
 		$this->data['pagebody'] = 'history';
+		$source = $this->transacHistory->all();
+		$list = array();
+		foreach($source as $transac) {
+			$list[] = array (
+			'id' => $transac['id'],
+			'purchases' => $transac['purchases'],
+			'assemblies' => $transac['assemblies'],
+			'shipments' => $transac['shipments'],
+			'dtTrans' => $transac['dtTrans']
+			);
+		}
+		$this->data['transacHistory'] = $list;
 		$this->render();
 	}
 

@@ -18,7 +18,6 @@
                     <span class="myhead">UGLIBOI-Z</span>
                     <span class="mynav">{menubar}</span>
                 </div>
-                <div class="alone"></div>
 				<div id="content">
 	                            {content}
 				</div>

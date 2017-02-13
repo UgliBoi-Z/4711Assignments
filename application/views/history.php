@@ -1,18 +1,21 @@
-<h1>Transaction History</h1>
-<div id="historyTable">
-    <!-- {history} -->
-    <table>
+<h1>UgliBoi-Z Transaction History</h1>
+<div id="transacHistory">
+    <table id = "historyTable">
         <tr>
-            <th>Trans. #</th>
+            <th>Trans ID</th>
             <th>Parts Ordered</th>
-            <th>Date Ordered</th>
-            <th>Date Processed</th>
+            <th>Robots Assembled</th>
+            <th>Shipments</th>
+            <th>Date</th>
         </tr>
+        {transacHistory}
         <tr>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
+            <td>{id}</td>
+            <td>{purchases}</td>
+            <td>{assemblies}</td>
+            <td>{shipments}</td>
+            <td>{dtTrans}</td>
         </tr>
+        {/transacHistory}
     </table>
 </div>
