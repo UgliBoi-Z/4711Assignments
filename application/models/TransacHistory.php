@@ -16,7 +16,7 @@ class TransacHistory extends CI_Model{
     {
             // iterate over the data until we find the one we want
             foreach ($this->data as $record)
-                    if ($record['piece'] == $which)
+                    if ($record['id'] == $which)
                             return $record;
             return null;
     }
