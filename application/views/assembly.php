@@ -6,7 +6,7 @@
     {partlist}
     <table id = "partlist">
 	<tr>
-            <th><img src="parts/{mug}" alt="Part Image" height="83" width="200"> </th>
+            <th><img src="assets/parts/{mug}" alt="Part Image" height="83" width="200"> </th>
 	   <th><input type="checkbox" name="selected" value="S"> Select<br></th>
         </tr>
         <tr>
