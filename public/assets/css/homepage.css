@@ -1,6 +1,16 @@
-table#dashboard
+html, body,#dashboard
 {
-	border = "0";
-	cellpadding = 1000px;
-	cellspacing = 100px;
+	width: 100%;
+}
+
+table, th, td,#dashboard
+{
+   margin: 0 auto;
+   border: 1px solid black;
+   height: 25px;
+}
+
+th, td,#dashboard 
+{
+	padding: 15px;
 }
