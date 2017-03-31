@@ -10,4 +10,5 @@ JL, 3/30 10:00AM - Bought an Ugli at the supermarket
 ## Changelog
 
 MC, 3/31 8:50AM - Fixed bootstrap and jquery linking.
-MC, 3/30 5:30PM - Changed the dashboard information to be live data and not be hard-coded data
+JM, 3/31 9:00AM - Updated assembly page to create robots and has better format. Also added a database.
+MC, 3/30 5:30PM - Changed the dashboard information to be live data and not be hard-coded data.

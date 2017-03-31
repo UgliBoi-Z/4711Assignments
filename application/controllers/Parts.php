@@ -19,8 +19,9 @@ class Parts extends Application
 	 */
 	public function index()
 	{
-
-            $parts = $this->inventory->allParts();
+	    $this->load->database();
+	    $query = $this->db->query('SELECT * FROM parts');
+            $parts = $query->result_array()
             $this->load->library('table');
             $parms = array(
                 'table_open' => '<table class="gallery">',
