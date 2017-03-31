@@ -1,47 +1,30 @@
 
 
 <div id="body">
-<h1>UgliBoi-Z Assembly</h1>
 <div id="homepageDash" >
+<form action=<?php echo site_url("assembly/assemble");?> method="post">
+   <table id = "partlist">
+     	<tr>
+	<th>Select</th>
+    	<th>Part</th>
+	<th>CA Code</th>
+	<th>Plant</th>
+	<th>Timestamp</th>
+	<th>Image</th>
+  	</tr>
     {partlist}
-    <table id = "partlist">
-	<tr>
-            <th><img src="assets/parts/{mug}" alt="Part Image" height="83" width="200"> </th>
-	   <th><input type="checkbox" name="selected" value="S"> Select<br></th>
-        </tr>
-        <tr>
-            <th>Model: </th>
-            <th>{model}</th>
-        </tr>
-	<tr>
-            <th>Part: </th>
-            <th>{part}</th>
-        </tr>
-	<tr>
-            <th>Piece: </th>
-            <th>{piece}</th>
-        </tr>
-	<tr>
-            <th>CA: </th>
-            <th>{CA}</th>
-        </tr>
-	<tr>
-            <th>Plant: </th>
-            <th>{plant}</th>
-        </tr>
-	<tr>
-            <th>Date: </th>
-            <th>{date}</th>
-        </tr>
-        <tr>
-	   
-        </tr>
-	<br>
+  	<tr>
+	<th><input type="checkbox" name="selected[]" value={part_id}></th>
+    	<td>{part_code}</td>
+	<td>{part_ca}</td>
+	<td>{built_at}</td>
+	<td>{date_built}</td>
+	<th><img src="assets/parts/{part_code}.jpeg" alt="Part Image" height="40" width="50"></th>
+  	</tr>
+        {/partlist}
     </table>
-    {/partlist}
-  	<button type="button">Return to head office</button> 
-	<button type="button">Build it</button> 
-    
+	<input type="submit" value="Assemble it"/>
+
 </div>
 
 </div>
