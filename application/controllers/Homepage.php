@@ -15,11 +15,10 @@ class Homepage extends Application
 		$sumParts = $json['parts_made'];
 		$sumAssemble = $json['bots_built'];
 		$spent = $json['boxes_bought'] * 100;
-		$sold = 0;
 		$net = 0;
 		$current = $json['balance'];
 
-		$net = $sold - $spent;
+		$net = 2000 - $current;
 
 		$records[] = array ('part' => $sumParts, 'assembled' => $sumAssemble, 'fundSpent' => $spent
 							,'fundNet' => $net, 'fundCurrent' => $current);

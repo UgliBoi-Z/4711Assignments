@@ -1,7 +1,7 @@
 <h2> Dashboard </h2>
 <div id="homepageDash" >
 	{records}
-	<table id = "dashboard">
+	<table id = "dashboard" class = "table">
 		<tr>
 			<th>Parts on hand</th>
 			<th>Assembled Robots</th>
