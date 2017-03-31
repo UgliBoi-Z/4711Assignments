@@ -9,30 +9,20 @@ class Homepage extends Application
 	{
 		$this->data['pagebody'] = 'welcome_message'; // Linking which View to use
 
+		$json = json_decode(file_get_contents('https://umbrella.jlparry.com/info/scoop/ugli'), true);
 		$source = $this->inventory->all();
 		$records = array ();
-		$sumParts = 0;
-		$sumAssemble = 0;
-		$spent = 0;
+		$sumParts = $json['parts_made'];
+		$sumAssemble = $json['bots_built'];
+		$spent = $json['boxes_bought'] * 100;
 		$sold = 0;
-		$earned = 0;
+		$net = 0;
+		$current = $json['balance'];
 
-		// running through the index and grabbing the information that's needed
-		foreach ($source as $record)
-		{
-			$sumParts += intval($record['part']);
-			/* As of right now, these are commented out because our model does not have any fields for fully
-			   assembled robots, funds that's been used for spending, and funds for robots sold
-
-			$sumAssemble += intval($record['assemble']);
-			$spent += intval($record['price']);
-			$sold += intval($record['sold']); */
-		}
-
-		$earned = $sold - $spent;
+		$net = $sold - $spent;
 
 		$records[] = array ('part' => $sumParts, 'assembled' => $sumAssemble, 'fundSpent' => $spent
-							,'fundEarned' => $earned);
+							,'fundNet' => $net, 'fundCurrent' => $current);
 
 		$this->data['records'] = $records;
 
