@@ -7,10 +7,10 @@ class Homepage extends Application
 	// loads the initial page and grabs the info needed
 	public function index()
 	{
+		$role = $this->session->userdata('userrole');
 		$this->data['pagebody'] = 'welcome_message'; // Linking which View to use
 
 		$json = json_decode(file_get_contents('https://umbrella.jlparry.com/info/scoop/ugli'), true);
-		$source = $this->inventory->all();
 		$records = array ();
 		$sumParts = $json['parts_made'];
 		$sumAssemble = $json['bots_built'];
@@ -21,7 +21,7 @@ class Homepage extends Application
 		$net = 2000 - $current;
 
 		$records[] = array ('part' => $sumParts, 'assembled' => $sumAssemble, 'fundSpent' => $spent
-							,'fundNet' => $net, 'fundCurrent' => $current);
+							,'fundNet' => $net, 'fundCurrent' => $current, 'role' => $role);
 
 		$this->data['records'] = $records;
 

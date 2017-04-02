@@ -1,6 +1,7 @@
-<h2> Dashboard </h2>
+<h2> Dashboard </h2> 
 <div id="homepageDash" >
 	{records}
+		<h3>{role}</h3>
 	<table id = "dashboard" class = "table">
 		<tr>
 			<th>Parts on hand</th>
