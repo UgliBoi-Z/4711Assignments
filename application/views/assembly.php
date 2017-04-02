@@ -1,5 +1,4 @@
-
-
+<h2> Assembly </h2>
 <div id="body">
 <div id="homepageDash" >
 <form action=<?php echo site_url("assembly/assemble");?> method="post">
