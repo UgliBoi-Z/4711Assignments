@@ -1,4 +1,4 @@
-<h1> About UgliBoy-Z</h1>
+<h2> About</h2>
 <p>UgliBoi-Z factory is a fictional robot factory
     created for an academic project and is not related to or endorsed
     by any similar business in the real world</p><br>
