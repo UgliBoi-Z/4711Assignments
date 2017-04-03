@@ -37,7 +37,8 @@ class Assembly extends Application
 			'part_code' => $part['part_code'],
 			'part_ca' => $part['part_ca'],
 			'built_at' => $part['built_at'],
-			'date_built' => $part['date_built']);
+			'date_built' => $part['date_built'],
+                        'part_model' => $part['part_model']);
 		}
 		$this->data['partlist'] = $list;
 		$this->render();

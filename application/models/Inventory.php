@@ -36,7 +36,7 @@ class Inventory extends CI_Model {
 
     public function getSinglePart($id) {
         $this->db->from('parts');
-        $this->db->where('part_code', $id);
+        $this->db->where('part_id', $id);
         $query = $this->db->get();
         $result = $query->result_array();
         return $result;

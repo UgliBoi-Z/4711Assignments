@@ -33,20 +33,26 @@ class Parts extends Application {
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
                     'built_at' => $part['built_at'],
-                    'date_built' => $part['date_built']);
-                    
+                    'date_built' => $part['date_built'],
+                    'part_model' => $part['part_model'],
+                    'img' => $part['part_model'] . $part['part_code']);
+                
             } else if ($part['part_code'] == "2") {
                 $part_torsos[] = array('part_id' => $part['part_id'],
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
                     'built_at' => $part['built_at'],
-                    'date_built' => $part['date_built']);
+                    'date_built' => $part['date_built'],
+                    'part_model' => $part['part_model'],
+                    'img' => $part['part_model'] . $part['part_code']);
             } else if ($part['part_code'] == "3") {
                 $part_feet[] = array('part_id' => $part['part_id'],
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
                     'built_at' => $part['built_at'],
-                    'date_built' => $part['date_built']);
+                    'date_built' => $part['date_built'],
+                    'part_model' => $part['part_model'],
+                    'img' => $part['part_model'] . $part['part_code']);
             } else {
                 continue;
             }
@@ -60,13 +66,13 @@ class Parts extends Application {
     public function item($id) {
 // view we want shown
         $this->data['pagebody'] = 'justone';
-        $this->load->database();
-        $source = $this->inventory->getSinglePart($id);
+        $source = $this->Inventory->getSinglePart($id);
 
         $this->data['date_built'] = $source[0]['date_built'];
         $this->data['part_id'] = $source[0]['part_id'];
         $this->data['part_code'] = $source[0]['part_code'];
         $this->data['part_ca'] = $source[0]['part_ca'];
+        $this->data['part_model'] = $source[0]['part_model'];
 
         $this->render();
     }
@@ -86,7 +92,8 @@ class Parts extends Application {
                     'part_id' => $part['model'],
                     'part_code' => $part['piece'],
                     'built_at' => $part['plant'],
-                    'date_built' => $part['stamp']
+                    'date_built' => $part['stamp'],
+                    'part_model' => $part['model']
                 );
 
                 //$this->Inventory->insertPart($data);
@@ -108,7 +115,8 @@ class Parts extends Application {
                     'part_id' => $part['model'],
                     'part_code' => $part['piece'],
                     'built_at' => $part['plant'],
-                    'date_built' => $part['stamp']
+                    'date_built' => $part['stamp'],
+                    'part_model' => $part['model']
                 );
 
                 //$this->Inventory->insertPart($data);

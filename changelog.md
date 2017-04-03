@@ -8,6 +8,7 @@ Example:
 JL, 3/30 10:00AM - Bought an Ugli at the supermarket
 
 ## Changelog
+MT 4/2   7:00PM - added column model to database, fixed parts and assembly accordingly to get proper image
 MT, 4/2  4:00PM - added functions for buybox and mybuilds to parts page
 MT, 4/2  2:30PM - added update functions to database in Inventory
 MT, 4/2  2:30PM - Fixed single detail parts page to use database info

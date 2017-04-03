@@ -5,6 +5,7 @@
    <table id = "partlist">
      	<tr>
 	<th>Select</th>
+        <th>Model</th>
     	<th>Part</th>
 	<th>CA Code</th>
 	<th>Plant</th>
@@ -14,11 +15,12 @@
     {partlist}
   	<tr>
 	<th><input type="checkbox" name="selected[]" value={part_id}></th>
+        <td>{part_model}</td>
     	<td>{part_code}</td>
 	<td>{part_ca}</td>
 	<td>{built_at}</td>
 	<td>{date_built}</td>
-	<th><img src="assets/parts/{part_code}.jpeg" alt="Part Image" height="40" width="50"></th>
+	<th><img src="assets/parts/{part_model}{part_code}.jpeg" alt="Part Image" height="40" width="50"></th>
   	</tr>
         {/partlist}
     </table>
