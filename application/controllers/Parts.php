@@ -8,6 +8,10 @@ class Parts extends Application {
      * index for Parts page. Collects all records from the robots and parts models
      */
     public function index() {
+        $this->polish();
+    }
+    
+    public function polish(){
         $this->data['pagebody'] = 'parts';
         $role = $this->session->userdata('userrole');
         if ((strcmp($role, "Worker") != 0) &&
@@ -20,33 +24,24 @@ class Parts extends Application {
         $query = $this->db->query('SELECT * FROM parts');
         $parts = $query->result_array();
 
-        $this->load->library('table');
-
-        $parms = array(
-            'table_open' => '<table class = "gallery">',
-            'cell_start' => '<td class = "oneimage">',
-            'cell_alt_start' => '<td class = "oneimage">'
-        );
-
-        $this->table->set_template($parms);
-
         $part_heads = array();
         $part_torsos = array();
         $part_feet = array();
         foreach ($parts as $part) {
-            if ($part['part_code'] == "a1" || $part['part_code'] == "b1" || $part['part_code'] == "c1") {
+            if ($part['part_code'] == "1" ) {
                 $part_heads[] = array('part_id' => $part['part_id'],
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
                     'built_at' => $part['built_at'],
                     'date_built' => $part['date_built']);
-            } else if ($part['part_code'] == "a2" || $part['part_code'] == "b2" || $part['part_code'] == "c2") {
+                    
+            } else if ($part['part_code'] == "2") {
                 $part_torsos[] = array('part_id' => $part['part_id'],
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
                     'built_at' => $part['built_at'],
                     'date_built' => $part['date_built']);
-            } else if ($part['part_code'] == "a3" || $part['part_code'] == "b3" || $part['part_code'] == "c3") {
+            } else if ($part['part_code'] == "3") {
                 $part_feet[] = array('part_id' => $part['part_id'],
                     'part_code' => $part['part_code'],
                     'part_ca' => $part['part_ca'],
@@ -79,36 +74,50 @@ class Parts extends Application {
     public function buy() {
         //$url = "https://umbrella.jlparry.com/work/mybuilds?key=".$key;
         //need to get the actuall session KEY
-        $url = "https://umbrella.jlparry.com/work/buybox?key=3b7680";
-
+        $url = "https://umbrella.jlparry.com/work/buybox?key=1c61f1";
         $response = file_get_contents($url);
-        $parts = json_decode($response, true);
-        foreach ($parts as $part) {
-            $data = array(
-                'part_ca' => $part['id'],
-                'part_id' => $part['model'],
-                'part_code' => $part['piece'],
-                'built_at' => $part['plant'],
-                'date_built' => $part['stamp']
-            );
+        
+        
+        if(substr($response, 0, 4) != 'Oops'){
+            $results = json_decode($response, true);
+            foreach ($results as $part) {
+                $data = array(
+                    'part_ca' => $part['id'],
+                    'part_id' => $part['model'],
+                    'part_code' => $part['piece'],
+                    'built_at' => $part['plant'],
+                    'date_built' => $part['stamp']
+                );
 
-            $this->Inventory->insertPart($data);
+                //$this->Inventory->insertPart($data);
+                //$this->db->insert('parts', $part);
+                $this->db->insert('parts',$data);
+            }
         }
+        $this->polish();
     }
 
     public function build() {
-        $response = file_get_contents('https://umbrella.jlparry.com/work/mybuilds?key=3b7680');
-        $parts = json_decode($response, true);
-        foreach ($parts as $part) {
-            $data = array(
-                'part_ca' => $part['id'],
-                'part_id' => $part['model'],
-                'part_code' => $part['piece'],
-                'built_at' => $part['plant'],
-                'date_built' => $part['stamp']
-            );
-            $this->Inventory->insertPart($data);
+        $url = "https://umbrella.jlparry.com/work/mybuilds?key=1c61f1";
+        $response = file_get_contents($url);
+        if(substr($response, 0, 4) != 'Oops'){
+            $results = json_decode($response, true);
+            foreach ($results as $part) {
+                $data = array(
+                    'part_ca' => $part['id'],
+                    'part_id' => $part['model'],
+                    'part_code' => $part['piece'],
+                    'built_at' => $part['plant'],
+                    'date_built' => $part['stamp']
+                );
+
+                //$this->Inventory->insertPart($data);
+                $this->db->insert('parts',$data);
+            }
         }
+        
+        $this->polish();
+        
     }
 
 }
