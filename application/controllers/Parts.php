@@ -74,7 +74,7 @@ class Parts extends Application {
     public function buy() {
         //$url = "https://umbrella.jlparry.com/work/mybuilds?key=".$key;
         //need to get the actuall session KEY
-        $url = "https://umbrella.jlparry.com/work/buybox?key=1c61f1";
+        $url = "https://umbrella.jlparry.com/work/buybox?key=1a18f9";
         $response = file_get_contents($url);
         
         
@@ -98,7 +98,7 @@ class Parts extends Application {
     }
 
     public function build() {
-        $url = "https://umbrella.jlparry.com/work/mybuilds?key=1c61f1";
+        $url = "https://umbrella.jlparry.com/work/mybuilds?key=1a18f9";
         $response = file_get_contents($url);
         if(substr($response, 0, 4) != 'Oops'){
             $results = json_decode($response, true);
